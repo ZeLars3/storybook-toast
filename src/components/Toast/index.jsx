@@ -12,21 +12,27 @@ export const Toast = ({ toast, handleClick }) => {
     handleClick(toast.id)
   }
 
+  const {
+    backgroundColor,
+    padding,
+    color,
+    icon,
+    description,
+  } = toast
+
   return (
-    <ToastWrapper
-      color={toast.backgroundColor}
-      padding={toast.padding}>
-      <CancelWrapper color={toast.color}>
+    <ToastWrapper color={backgroundColor} padding={padding}>
+      <CancelWrapper color={color}>
         <Button
           icon={ICONS.Close}
           handleClick={deleteToast}
         />
       </CancelWrapper>
-      <Container color={toast.color}>
-        <IconWrapper color={toast.color}>
-          <Icon icon={toast.icon} />
+      <Container color={color}>
+        <IconWrapper color={color}>
+          <Icon icon={icon} />
         </IconWrapper>
-        <Text text={toast.description} />
+        <Text text={description} />
       </Container>
     </ToastWrapper>
   )

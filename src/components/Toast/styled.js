@@ -19,7 +19,6 @@ export const Container = styled.div`
 `
 
 export const ToastWrapper = styled.div`
-  height: 90px;
   width: 350px;
   padding: 30px;
   margin-bottom: 30px;

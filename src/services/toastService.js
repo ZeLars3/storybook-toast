@@ -8,6 +8,12 @@ let toastList = []
 
 class ToastService {
   constructor(toastList) {
+    if(!!ToastService.instance) {
+      return ToastService.instance
+    }
+
+    ToastService.instance = this
+
     this.toastList = toastList
   }
 

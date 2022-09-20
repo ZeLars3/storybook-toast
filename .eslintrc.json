@@ -18,6 +18,7 @@
       "error",
       "as-needed"
     ],
+    "no-extra-boolean-cast": "warn",
     "prefer-destructuring": "error",
     "max-len": [
       "warn",
